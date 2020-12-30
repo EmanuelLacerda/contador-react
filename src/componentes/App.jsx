@@ -23,10 +23,18 @@ function App(props){
 	const [passo, setPasso] = useState(1)
 	const [novoValor, setNovoValor] = useState("")
 
+
 	function incrementar(){
-		console.log(typeof passo)
 		var novoValor = valor+passo
 		setValor(novoValor)
+	}
+
+	function onMouseOutBotaoIncrementar(){
+			setImagemBotaoIncrementar( botaoIncrementarEstadoNormal )
+	}
+
+	function onMouseOverBotaoIncrementar(){
+			setImagemBotaoIncrementar( botaoIncrementarEstadoHover )
 	}
 
 	function decrementar(){
@@ -37,6 +45,48 @@ function App(props){
 		setValor(novoValor)
 	}
 
+	function onChangeInputAlterarValor(evento){
+		setNovoValor(
+			parseInt(evento.target.value) || ""
+		)
+
+		console.log(novoValor)
+
+		if(evento.target.value === ""){
+			setEstadoBotaoAlterar('desativo')
+			setImagemBotaoAlterar(
+					botaoAlterarEstadoDesativo
+				)
+		} else{
+			setNovoValor(
+				parseInt(evento.target.value)
+			)
+
+			setEstadoBotaoAlterar('ativo')
+			setImagemBotaoAlterar(
+					botaoAlterarEstadoNormal
+				)
+		}
+	}
+
+	function onMouseOutBotaoAlterar(){
+
+		if (estadoBotaoAlterar === 'ativo'){
+				setImagemBotaoAlterar( botaoAlterarEstadoNormal )
+		}
+
+	}
+
+	function onMouseOverBotaoAlterar(){
+
+		if (estadoBotaoAlterar === 'ativo'){
+				setImagemBotaoAlterar(
+					botaoAlterarEstadoHover
+				)
+		}
+
+	}
+
 
   return(
   <main id="App">
@@ -45,96 +95,47 @@ function App(props){
   	</div>
 
   	<div id="contador">
-  		<div id="alterar-passo">
+  		<div className="input-label">
 			<label htmlFor="alterarpasso">Passo</label>
 			<br></br>
 			<input type="number" name="alterarpasso" value={passo} onChange={function onChange(evento){
-					setPasso(
-						parseInt(evento.target.value)
-					)
+					setPasso( parseInt(evento.target.value) )
 				}
 			}>
 			</input>
   		</div>
-  		<div id="botoes">
-  			<img src={imagemBotaoIncrementar} onClick={incrementar} onMouseOut={function onMouseOut(){
-  					setImagemBotaoIncrementar(
-  						botaoIncrementarEstadoNormal
-  					)
-  				}
-  			} onMouseOver={function onMouseOver(){
-  					setImagemBotaoIncrementar(
-  						botaoIncrementarEstadoHover
-  					)
-  				}
-  			}>
-
+  		<div className="botoes">
+  			<img src={imagemBotaoIncrementar} onClick={ incrementar } onMouseOut={ onMouseOutBotaoIncrementar } onMouseOver={ onMouseOverBotaoIncrementar }>
   			</img>
 
   			<img src={imagemBotaoDecrementar} onClick={decrementar} onMouseOut={function onMouseOut(){
-  					setImagemBotaoDecrementar(
-  						botaoDecrementarEstadoNormal
-  					)
+  					setImagemBotaoDecrementar( botaoDecrementarEstadoNormal )
   				}
   			} onMouseOver={function onMouseOver(){
-  					setImagemBotaoDecrementar(
-  						botaoDecrementarEstadoHover
-  					)
+  					setImagemBotaoDecrementar( botaoDecrementarEstadoHover )
   				}
   			}>
-
   			</img>
   		</div>
   	</div>
 
   	<div id="alterar-valor">
-  		<div id="input-label">
+  		<div className="input-label">
 			<label htmlFor="alterarvalor">Novo valor</label>
 			<br></br>
-			<input type="number" name="alterarvalor" value={novoValor} onChange={function onChange(evento){
-					setNovoValor(
-						parseInt(evento.target.value) || ""
-					)
-
-					console.log(novoValor)
-
-					if(evento.target.value === ""){
-						setEstadoBotaoAlterar('desativo')
-						setImagemBotaoAlterar(
-		  					botaoAlterarEstadoDesativo
-		  				)
-					} else{
-						setNovoValor(
-							parseInt(evento.target.value)
-						)
-
-						setEstadoBotaoAlterar('ativo')
-						setImagemBotaoAlterar(
-		  					botaoAlterarEstadoNormal
-		  				)
-					}
+			<input type="number" name="alterarvalor" value={novoValor} onChange={
+				function onChange(evento){
+					onChangeInputAlterarValor(evento)
 				}
 			}>
 			</input>
   		</div>
-  		<div id="botao">
-  			<img src={imagemBotaoAlterar} onClick={alterarValor} onMouseOut={function onMouseOut(){
-	  				if (estadoBotaoAlterar === 'ativo'){
-		  					setImagemBotaoAlterar(
-		  						botaoAlterarEstadoNormal
-		  					)
-		  			}
-  				}
-  			} onMouseOver={function onMouseOver(){
-  					if (estadoBotaoAlterar === 'ativo'){
-		  					setImagemBotaoAlterar(
-		  						botaoAlterarEstadoHover
-		  					)
-		  			}
-  				}
-  			}>
 
+  		<div className="botoes">
+
+  			<img src={imagemBotaoAlterar} onClick={alterarValor} onMouseOut={ onMouseOutBotaoAlterar } onMouseOver={ onMouseOverBotaoAlterar }>
   			</img>
+
   		</div>
   	</div>
   </main>	

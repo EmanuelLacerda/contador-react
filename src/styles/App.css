@@ -1,5 +1,17 @@
 input{
 	width: 180px;
+	border-radius: 8px;
+}
+
+input:hover{
+	border: 2px solid var(--cor-do-hover);
+	border-radius: 8px;
+}
+
+input:focus{
+	outline: none;
+	border: 3px solid var(--cor-do-hover);
+	border-radius: 8px;
 }
 
 label{
@@ -30,6 +42,8 @@ label{
 }
 
 #display-digito{
+	flex: 1;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,28 +51,31 @@ label{
 	font-size: 90px;
 	font-weight: bold;
 
-	min-width: var(--largura-app);
+	min-width: var(--largura-flex-itens-nivel-1);
 	height: 90px;
 
 	border: 1px solid white;
 }
 
 #contador, #alterar-valor{
-	min-width: var(--largura-contador);
-	height: var(--altura-contador);
+	flex: 2;
+
+	min-width: var(--largura-flex-itens-nivel-2);
+	height: var(--altura-flex-itens-nivel-2);
 
 	border: 1px solid white;
 }
 
-#contador #alterar-passo, #alterar-valor #input-label{
+.input-label{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	height: 70px;
+	height: 70px;	
 }
 
-#botoes, #botao{
+
+.botoes{
 	display: flex;
 	align-items: center;
 	justify-content: center;
