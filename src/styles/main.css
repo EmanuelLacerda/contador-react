@@ -1,0 +1,13 @@
+:root{
+	--cor-background-do-site: #F7FFFF;
+	--cor-background-do-container: #190933;
+	--cor-do-texto: #F2F2F2;
+	--cor-do-botao: #AA4465;
+
+	--largura-app: 466px;
+	--altura-app: 258px;
+
+	--largura-contador: 231px;
+	--altura-contador: 172px;
+}
+
