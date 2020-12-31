@@ -1,0 +1,42 @@
+@media screen and (min-width: 489px){
+	label{
+		margin-top: 10px;
+	}
+
+	#root{
+		align-items: center;
+	}
+
+	#App{
+		display: flex;
+		flex-wrap: wrap;
+
+		width: var(--largura-app-breakpoint489px);
+		height: var(--altura-app-breakpoint489px);
+	}
+
+	#display-digito{
+		min-width: var(--largura-flex-itens-nivel-1-breakpoint489px);
+		height: 90px;	
+	}
+
+	#contador{
+		border-bottom: none;
+		border-right: 2px solid white;
+	}
+
+	#contador, #alterar-valor{
+		flex: 2;
+
+		min-width: var(--largura-flex-itens-nivel-2-breakpoint489px);
+		height: var(--altura-flex-itens-nivel-2-breakpoint489px);
+	}
+
+	.input-label{
+		height: 70px;	
+	}
+
+	#alterar-valor img{
+		margin-top: 10px
+	}
+}

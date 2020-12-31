@@ -5,12 +5,24 @@
 	--cor-do-botao: #AA4465;
 	--cor-do-hover: #AA4465;
 
-	--largura-app: 466px;
-	--altura-app: 258px;
+	--largura-app: 340px;
+	--altura-app: 390px;
 
-	--largura-flex-itens-nivel-1: var(--largura-app);
+	--largura-flex-itens-nivel-1: 100%;
 
-	--largura-flex-itens-nivel-2: 231px;
-	--altura-flex-itens-nivel-2: 172px;
+	--largura-flex-itens-nivel-2: 100%;
+	--altura-flex-itens-nivel-2: 110px;
+
+
+	--largura-app-breakpoint489px: 466px;
+	--altura-app-breakpoint489px: 258px;
+
+	--largura-flex-itens-nivel-1-breakpoint489px: var(--largura-app);
+
+	--largura-flex-itens-nivel-2-breakpoint489px: 220px;
+	--altura-flex-itens-nivel-2-breakpoint489px: 162px;
 }
 
+body{
+	background-color: var(--cor-background-do-site);
+}

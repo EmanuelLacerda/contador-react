@@ -1,5 +1,6 @@
 import './styles/main.css'
 import './styles/App.css'
+import './styles/responsividade.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'

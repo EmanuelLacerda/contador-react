@@ -18,22 +18,18 @@ label{
 	font-size: 20px;
 	height: 60px;
 
-	margin: 0;
-	margin-top: 10px;
+	margin: 10px;
 }
 
 #root{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 
 	height: 29em;
 }
 
 #App{
-	display: flex;
-	flex-wrap: wrap;
-
 	background-color: var(--cor-background-do-container);
 	color: var(--cor-do-texto);
 
@@ -54,16 +50,8 @@ label{
 	min-width: var(--largura-flex-itens-nivel-1);
 	height: 90px;
 
-	border: 1px solid white;
-}
+	border-bottom: 2px solid white;
 
-#contador, #alterar-valor{
-	flex: 2;
-
-	min-width: var(--largura-flex-itens-nivel-2);
-	height: var(--altura-flex-itens-nivel-2);
-
-	border: 1px solid white;
 }
 
 .input-label{
@@ -80,6 +68,21 @@ label{
 	align-items: center;
 	justify-content: center;
 
-	margin-top: 9px;
+	margin-top: 20px;
 	margin-bottom: 10px;
+}
+
+#contador, #alterar-valor{
+	flex: 2;
+
+	min-width: var(--largura-flex-itens-nivel-2);
+	height: var(--altura-flex-itens-nivel-2);
+}
+
+#contador{
+	height: 155px;
+}
+
+#display-digito, #contador{
+	border-bottom: 2px solid white;
 }
