@@ -1,24 +1,35 @@
-# Sobre o projeto
+# Contador
 
 Este projeto é o meu primeiro projeto com React. Como primeiro projeto eu quis desenvolver o clássico contador.
 
-As funcionalidades dele são botão para incrementar e botão para decrementar, formulário para definir o passo e formulário para alterar o valor. O objetivo é que o contador seja responsível e tenha tratamento de erro.
-
 Nesse projeto também utilizei meus conhecimentos atuais de UX/UI Design para tornar a UI dele acessível, com usabilidade e esteticamente bonita.
 
-------
 
-# Créditos
+
+## Funcionalidades
+
+- Incrementar/decrementar o valor do display
+- Alterar o passo da incrementação/decrementação
+- Definir um novo valor para o valor do display
+
+
+
+## Ferramentas e conceitos utilizados
+
+- [React](https://pt-br.reactjs.org/docs/getting-started.html)
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+- [Flexbox](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
+- [At rule media query](https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries)
+
+
+
+## Créditos
 
 - Para escolher a paleta de cor eu utilizei https://coolors.co/.
 - Para verificar se o contraste entre cor de background e cor de texto estava conforme o ideal eu utilizei https://webaim.org/resources/contrastchecker/.
 - Os ícones utilizados foram retirados de https://akveo.github.io/eva-icons/#/.
 
-------
 
-# Visão geral
-
-No futuro, esse tópico terá um link que redireciona para uma postagem minha no LinkendIn mostrando em vídeo como ficou a versão final do Contador.
 
 ------
 
