@@ -6,6 +6,10 @@ Nesse projeto também utilizei meus conhecimentos atuais de UX/UI Design para to
 
 
 
+![contador-react](src/assets/contador-react.gif)
+
+
+
 ## Funcionalidades
 
 - Incrementar/decrementar o valor do display
